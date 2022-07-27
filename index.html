@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="icon" href="images/icons/icon.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    
+    <script src="files/genshin.js"></script>
+    <script src="script.js"></script>
+    <title>Higher or Lower ft. Genshin Characters</title>
+
+<body onload="loadSite()">
+    <div class="bg-image home">
+        <center>
+            <img src="images/icons/logo.png" id="logo" onclick="homePage()">
+            <div id="homeScreen">
+                <p>Choose the more used Genshin Character in the Spiral Abyss.
+                    <br>Characters range from the Traveler to Yae Miko.
+                    <br> This data is from March 2022 provided by Genshin Lab
+                </p>
+                <button class="playBtn" onclick="play()">Play Now</button>
+
+            </div>
+        </center>
+
+        <div class="theGame">
+            <center>
+                <div class="charImage">
+                    <img id="image1">
+                    <span class="caption">
+                        <p id="character1"></p>
+                        <p id="searches1"></p>
+                    </span>
+                </div>
+                <div class="charImage">
+                    <img id="image2">
+                    <span class="caption">
+                        <p id="character2"></p>
+                        <p id="searches2"></p>
+                        <!--true = higher false = lower-->
+                        <div id="buttons">
+                            <button class="higherLowerBtn" onclick="checkWin(true)">Higher ▲</button><br>
+                            <button class="higherLowerBtn" onclick="checkWin(false)">Lower ▼</button>
+                        </div>
+                    </span>
+                </div>
+            </center>
+        </div>
+
+        <div id="win">
+            <center>
+                <h1>You Won! <img id="winlose" src="images/icons/enviChill.png"></h1>
+                <p id="finalscore"></p>
+                <button class="playBtn" onclick="play()">Try Again</button>
+            </center>
+        </div>
+
+        <div id="lose">
+            <center>
+                <h1>You lost <img id="winlose" src="images/icons/enviSad.png"></h1>
+                <p id="finalscore"></p>
+                <button class="playBtn" onclick="play()">Try Again</button>
+            </center>
+        </div>
+        <br>
+
+        <div id="highscore"></div>
+        <div id="currScore"></div>
+
+        <div class="footer">
+            <p>Made by <a href="https://www.twitter.com/BlueStixs" target="_blank">BlueStixs</a></p>
+            <p>Data from <a href="https://www.genshinlab.com/genshin-impact-spiral-abyss-chart/"
+                    target="_blank">Genshin Lab</a></p>
+            <p>Subscribe to <a href="https://www.youtube.com/Enviosity?sub_confirmation=1" target="_blank" onclick="selloutMessage()">Enviosity</a>
+            </p>
+            <p>Please support the <a href="https://www.higherlowergame.com" target="_blank">official release</a></p>
+
+        </div>
+
+    </div>
+</body>
+<script src="script.js"></script>
+</head>
+
+</html>
